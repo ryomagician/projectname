@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hamaji Engineering Knowledge</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+}
+
+/* HEADER */
+
+header{
+background:#003a8f;
+color:white;
+padding:15px;
+display:flex;
+align-items:center;
+}
+
+.menu-btn{
+font-size:26px;
+cursor:pointer;
+margin-right:20px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:-250px;
+top:0;
+width:250px;
+height:100%;
+background:#222;
+color:white;
+padding-top:60px;
+transition:0.3s;
+}
+
+.sidebar a{
+display:block;
+padding:12px 20px;
+color:white;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+background:#444;
+}
+
+/* CONTENT */
+
+.content{
+padding:40px;
+}
+
+/* GRID KNOWLEDGE */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+border:1px solid #ddd;
+padding:20px;
+border-radius:5px;
+}
+
+.card:hover{
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* HERO */
+
+.hero{
+background:#eef3fb;
+padding:40px;
+margin-bottom:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+
+<a href="#">Home</a>
+
+<a href="#">Knowledge</a>
+<a href="#">CNC Programming</a>
+<a href="#">ICAD SX</a>
+<a href="#">Mechanical Design</a>
+
+<a href="#">Tutorials</a>
+<a href="#">Download Tools</a>
+<a href="#">Support</a>
+
+</div>
+
+<header>
+
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+<h2>Hamaji Engineering</h2>
+
+</header>
+
+<div class="content">
+
+<div class="hero">
+
+<h1>Engineering Knowledge Base</h1>
+
+<p>CNC • ICAD • Mechanical Design</p>
+
+</div>
+
+<h2>Knowledge Articles</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>CNC Programming</h3>
+<p>Learn Fanuc G-code and macro programming</p>
+</div>
+
+<div class="card">
+<h3>ICAD SX Tutorial</h3>
+<p>3D modeling and automation techniques</p>
+</div>
+
+<div class="card">
+<h3>Mechanical Design</h3>
+<p>Gear design, tolerance and bearing selection</p>
+</div>
+
+<div class="card">
+<h3>Grinding Technology</h3>
+<p>CBN grinding and heat analysis</p>
+</div>
+
+<div class="card">
+<h3>VBA Automation</h3>
+<p>Excel automation for engineering</p>
+</div>
+
+<div class="card">
+<h3>Engineering Tools</h3>
+<p>Download useful engineering calculators</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+var sidebar=document.getElementById("sidebar");
+
+if(sidebar.style.left=="0px"){
+sidebar.style.left="-250px";
+}else{
+sidebar.style.left="0px";
+}
+
+}
+
+</script>
+
+</body>
+</html>
